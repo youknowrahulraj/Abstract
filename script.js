@@ -1,55 +1,21 @@
-const input = document.getElementById("link");
-const fetchButton = document.getElementById("fetch-btn");
-const message = document.getElementById("message");
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2UgVrDoDNijExJF0NL9I3PCD54QZam2U",
+    authDomain: "abstracttobinary.firebaseapp.com",
+    projectId: "abstracttobinary",
+    storageBucket: "abstracttobinary.firebasestorage.app",
+    messagingSenderId: "908087090742",
+    appId: "1:908087090742:web:5524fce38f23b07e218297",
+    measurementId: "G-ZD7YYEZSNN"
+  };
 
-function getYouTubeVideoId(url) {
-
-    const urlObject = new URL(url);
-
-    if (
-        urlObject.hostname === "www.youtube.com" ||
-        urlObject.hostname === "youtube.com"
-    ) {
-        return urlObject.searchParams.get("v");
-    }
-
-    if (urlObject.hostname === "youtu.be") {
-        return urlObject.pathname.substring(1);
-    }
-
-    return null;
-}
-
-
-fetchButton.addEventListener("click", function () {
-
-    const youtubeLink = input.value.trim();
-
-    // Check if input is empty
-    if (youtubeLink === "") {
-        message.textContent = "Please enter a YouTube link.";
-        return;
-    }
-
-    // Check if URL belongs to YouTube
-    const youtubePattern =
-        /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
-
-    if (!youtubePattern.test(youtubeLink)) {
-        message.textContent = "Please enter a valid YouTube link.";
-        return;
-    }
-
-    // Extract YouTube Video ID
-    const videoId = getYouTubeVideoId(youtubeLink);
-
-    if (!videoId) {
-        message.textContent = "Could not find the video ID.";
-        return;
-    }
-
-    // Temporary output
-    message.textContent = "Video ID: " + videoId;
-
-});
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
