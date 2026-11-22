@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #fffbf2;
+    --dark-color: #222222;
+    --orange: #ff7a00;
+    --text-color: #333333;
+    --border-color: #e8e0d8;
+}
+
+body {
+    background-color: var(--background-color);
+
+    background-image:
+        linear-gradient(#e8e0d8e5 1px, transparent 1px),
+        linear-gradient(90deg, #e8e0d8e5 1px, transparent 1px);
+
+    background-size: 60px 60px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ================Header======================= */
+header {
+
+    background: rgba(255, 253, 248, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    height: 70px;
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+}
+
+nav h1 {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-dark {
+    color: #222222;
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.nav-links a {
+    font-size: 17px;
+    margin: 0 25px 0 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--orange);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.fa-circle-user {
+    font-size: 25px;
+    color: #222222;
+    transition: transform 0.3s ease;
+}
+
+.fa-circle-user:hover {
+    font-size: 25px;
+    color: var(--orange);
+    transform: scale(1.2);
+}
+
+/* ==========================Hero============================= */
+#hero {
+    margin-top: 50px;
+}
+
+.container {
+    width: 80vw;
+    height: 200px;
+    margin: auto;
+ text-align: center;
+}
+.container input {
+    width: 50%;
+    height: 40px;
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 5px;
+     font-family: "Roboto", sans-serif;
+     font-size: 17px;
+    letter-spacing: 2px;
+     text-align: center;
+}
+
+.container button {
+    height: 30px;
+    width: 10%;
+    display: block;
+      border-radius: 5px;
+    margin: 20px auto 0;
+}
+#message{
+    margin-top: 5px;
+}

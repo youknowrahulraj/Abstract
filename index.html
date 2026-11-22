@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2UgVrDoDNijExJF0NL9I3PCD54QZam2U",
+    authDomain: "abstracttobinary.firebaseapp.com",
+    projectId: "abstracttobinary",
+    storageBucket: "abstracttobinary.firebasestorage.app",
+    messagingSenderId: "908087090742",
+    appId: "1:908087090742:web:5524fce38f23b07e218297",
+    measurementId: "G-ZD7YYEZSNN"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<body>
+
+    <header>
+        <nav>
+            <h1>
+                <span class="text-dark">Ab</span><span class="text-orange">stract</span>
+            </h1>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#link">Learn</a>
+                <a href="#">Features</a>
+                <a href="#">History</a>
+            </div>
+            <i class="fa-regular fa-circle-user"></i>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <form id="youtubeForm">
+                <input type="text" id="link" placeholder="Enter the youtube link">
+                     <p id="message"></p>
+                <button id="fetch-btn" type="submit">Fetch</button>
+            </form>
+       
+        </div>
+    </section>
+
+    <section id="summary">
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
